@@ -1,6 +1,7 @@
 #include <gtk/gtk.h>
 
 #include "toDeerList.h"
+#include "toDeerListWin.h"
 
 struct _ToDeerList {
   GtkApplication parent;
@@ -24,7 +25,11 @@ static void to_deer_list_init (ToDeerList *app) {
 }
 
 static void to_deer_list_activate(GApplication *app) {
-  
+  ToDeerListWindow *win;
+
+  win = to_deer_list_window_new ((ToDeerList*)app);
+  gtk_window_present (GTK_WINDOW (win));
+
 }
 
 static void

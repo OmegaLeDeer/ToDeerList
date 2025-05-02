@@ -1,3 +1,5 @@
+#pragma once
+
 #include <gtk/gtk.h>
 
 #define TODEERLIST_TYPE (to_deer_list_get_type ())
